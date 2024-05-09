@@ -10,63 +10,34 @@
     <title>FAQ Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-      body {
-        background-color: #f8f9fa;
-      }
-      .accordion {
-        margin-top: 20px;
-      }
-      .accordion .card {
-        border: none;
-        background: #fff;
-        border-bottom: 1px solid #eee;
-        border-radius: 0;
-        margin-bottom: 10px;
-      }
-      .accordion .card-header {
-        background-color: transparent;
-        border-bottom: 1px solid #ffc107;
-        padding: 10px 0;
-        cursor: pointer;
-      }
-      .accordion .card-header:hover {
-        background-color: #fff;
-      }
-      .accordion .card-header h5 {
-        color: #333;
-        margin-bottom: 0;
-        padding-left: 20px;
-      }
-      .accordion .card-header .btn-link {
-        text-decoration: none;
-        color: #333;
-      }
-      .accordion .card-header .btn-link:hover {
-        text-decoration: none;
-      }
-      .accordion .card-header .btn-link.collapsed:before {
-        content: '\f078';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        color: #ffc107;
-        margin-right: 10px;
-        transition: transform 0.3s ease-in-out;
-        transform: rotate(0deg);
-      }
-      .accordion .card-header .btn-link:not(.collapsed):before {
-        content: '\f077';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        color: #ffc107;
-        margin-right: 10px;
-        transition: transform 0.3s ease-in-out;
-        transform: rotate(180deg);
-      }
-      .accordion .card-body {
-        color: #555;
-        border-top: 1px solid #eee;
-        padding: 20px;
-      }
+    body {
+      background-color: #f8f9fa;
+    }
+    .about-header {
+      text-align: center;
+      margin-top: 50px;
+      color: #ffc107; /* Yellow */
+    }
+    .about-paragraph {
+      text-align: center;
+      color: #343a40; /* Dark gray */
+    }
+    .team-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+    .card {
+      width: 300px;
+      margin: 20px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background-color: #fff;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
     </style>
 
     <!-- Favicon -->
@@ -267,110 +238,56 @@
     </div>
     <!-- Navbar End -->
 
-    <div class="container">
-        <h1 class="text-center mt-5">Frequently Asked Questions</h1>
-        
-        <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <h5 class="mb-0">
-                <span style="border-bottom: 1px solid #ffc107;">Question 1:</span> What is Lorem Ipsum?
-              </h5>
-            </div>
-    
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam hendrerit velit, ac luctus mi varius et. Integer eget mi nec nisl finibus feugiat.
-              </div>
-            </div>
-          </div>
-    
-          <div class="card">
-            <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <h5 class="mb-0">
-                <span style="border-bottom: 1px solid #ffc107;">Question 2:</span> Where does it come from?
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam hendrerit velit, ac luctus mi varius et. Integer eget mi nec nisl finibus feugiat.
-              </div>
-            </div>
-          </div>
-    
-          <div class="card">
-            <div class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <h5 class="mb-0">
-                <span style="border-bottom: 1px solid #ffc107;">Question 3:</span> Why do we use it?
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam hendrerit velit, ac luctus mi varius et. Integer eget mi nec nisl finibus feugiat.
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              <h5 class="mb-0">
-                <span style="border-bottom: 1px solid #ffc107;">Question 4:</span> What are the benefits of using Bootstrap?
-              </h5>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-              <div class="card-body">
-                Bootstrap offers numerous benefits such as a responsive grid system, pre-styled components, JavaScript plugins, extensive documentation, and a large active community.
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingFive" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              <h5 class="mb-0">
-                <span style="border-bottom: 1px solid #ffc107;">Question 5:</span> How do I get started with Bootstrap?
-              </h5>
-            </div>
-            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-              <div class="card-body">
-                To get started with Bootstrap, you can include the Bootstrap CSS and JS files in your HTML document and use the provided classes and components to build your website.
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingSix" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              <h5 class="mb-0">
-                <span style="border-bottom: 1px solid #ffc107;">Question 6:</span> Is Bootstrap free to use?
-              </h5>
-            </div>
-            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-              <div class="card-body">
-                Yes, Bootstrap is an open-source project released under the MIT license, which means you can use it for free in both personal and commercial projects.
-              </div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-header" id="headingSeven" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-              <h5 class="mb-0">
-                <span style="border-bottom: 1px solid #ffc107;">Question 7:</span> Can I customize Bootstrap?
-              </h5>
-            </div>
-            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-              <div class="card-body">
-                Yes, Bootstrap allows for extensive customization. You can override the default styles, modify variables, or even create your own components to fit your project's needs.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <!-- Header -->
+  <header class="about-header">
+    <h1>About Us</h1>
+  </header>
 
+  <!-- About Paragraph -->
+  <div class="container">
+    <p class="about-paragraph">We are a team of passionate individuals dedicated to excellence.</p>
+  </div>
+
+  <!-- Team Members -->
+  <div class="container team-cards">
+    <!-- Team Member 1 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300" class="card-img-top" alt="Team Member 1">
+      <div class="card-body">
+        <h5 class="card-title">John Doe</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300" class="card-img-top" alt="Team Member 2">
+      <div class="card-body">
+        <h5 class="card-title">Jane Smith</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <!-- Team Member 3 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300" class="card-img-top" alt="Team Member 3">
+      <div class="card-body">
+        <h5 class="card-title">Alex Johnson</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <!-- Team Member 4 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300" class="card-img-top" alt="Team Member 4">
+      <div class="card-body">
+        <h5 class="card-title">Emily Davis</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Optional, for certain Bootstrap components) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
